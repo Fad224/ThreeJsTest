@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  base: './', // important for GitHub Pages
-});
+/**
+ * @type {import('vite').UserConfig}
+ */
+export default {
+  base: process.env.NODE_ENV === 'production' ? '/ThreeJsTest/' : ''
+}
