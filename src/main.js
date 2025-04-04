@@ -34,7 +34,7 @@ pmremGenerator.compileEquirectangularShader();
 
 // HDRI Loader
 new RGBELoader()
-  .setPath('hdr/')
+  .setPath(import.meta.env.BASE_URL + 'hdr/')
   .load('golden_gate_hills_4k.hdr', function (hdrTexture) {
     const envMap = pmremGenerator.fromEquirectangular(hdrTexture).texture;
     scene.environment = envMap;
